@@ -1,4 +1,5 @@
 # Mosquitto MQTT Publish and Subscribe
+Simple demonstration of Mosquitto MQTT broker.
 
 ## Run Mosquitto with docker-compose in a windows machine
 
