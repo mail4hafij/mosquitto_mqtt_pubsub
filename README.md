@@ -1,8 +1,12 @@
 # Mosquitto MQTT Publish and Subscribe
 Simple demonstration of Mosquitto MQTT broker.
+There are two dotnet core projects - 
+1. Publisher: publish a message to a given topic.
+2. Subscriber: subscribe to a topic and receive published messages.
 
-## Run Mosquitto with docker-compose in a windows machine
+## How to run locally
 
+1. Setup Mosquitto with docker-compose localy in a windows machine
 - Folders and files to create
 ```
 C:\mosquitto\config\mosquitto.conf
@@ -25,3 +29,5 @@ protocol mqtt
 - To shutt down
 ```docker-compose down```
 
+
+2. Build the solution and run Subscriber project first, then run the Publisher project.
