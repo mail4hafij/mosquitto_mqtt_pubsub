@@ -24,8 +24,7 @@ allow_anonymous false
 password_file /mosquitto/config/mosquitto.passwd
 ```
 
-- The mosquitto.passwd file should contain the following
-The default username/password is admin/password
+- The mosquitto.passwd file should contain the following. The default username/password is ```admin/password```
 ```
 admin:$6$utCGq9HKlEIB2HWO$Q77ea1FcXR9b1XoGU/iWQ1Yf9ptVZOgjW/gIxM/YECHdDECZrt0GONub3JtlkC0IGqFrZg4JemcqHzjc1QakQg==
 ```
