@@ -23,6 +23,7 @@ namespace ConsoleApp1
                     .WithTcpServer(configuration["MosquittoHost"], int.Parse(configuration["MosquittoPort"]))
                     .WithClientId(Guid.NewGuid().ToString())
                     .WithCleanSession()
+                    .WithCredentials(configuration["MosquittoUsername"], configuration["MosquittoPassword"])
                     .Build();
                 await mqttClient.ConnectAsync(options, CancellationToken.None);
 

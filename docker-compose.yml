@@ -9,9 +9,10 @@ services:
             - 9001:9001 #default mqtt port for websocket
         volumes:
             # local:container:access
-            - C:\mosquitto\config:/mosquitto/config:rw
+            - C:\mosquitto\config\mosquitto.conf:/mosquitto/config/mosquitto.conf:rw
+            - C:\mosquitto\config\mosquitto.passwd:/mosquitto/config/mosquitto.passwd
+            - C:\mosquitto\log\mosquitto.log:/mosquitto/log/mosquitto.log:rw
             - C:\mosquitto\data:/mosquitto/data:rw
-            - C:\mosquitto\log:/mosquitto/log:rw
         networks:
             - mosquitto
 networks:

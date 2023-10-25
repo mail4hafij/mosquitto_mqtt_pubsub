@@ -22,6 +22,7 @@ namespace Subscriber
                     .WithTcpServer(configuration["MosquittoHost"], int.Parse(configuration["MosquittoPort"]))
                     .WithClientId(Guid.NewGuid().ToString())
                     .WithCleanSession()
+                    .WithCredentials(configuration["MosquittoUsername"], configuration["MosquittoPassword"])
                     .Build();
 
                 // connect

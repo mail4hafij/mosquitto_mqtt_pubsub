@@ -10,15 +10,24 @@ There are two dotnet core projects -
 - Folders and files to create
 ```
 C:\mosquitto\config\mosquitto.conf
+C:\mosquitto\config\mosquitto.passwd
 C:\mosquitto\log\mosquitto.log
 C:\mosquitto\data
 ```
 
-- The mosquitto.conf file
+- The mosquitto.conf file should contain the following
 ```
-persistence true
-allow_anonymous true
+listener 1883
 protocol mqtt
+persistence true
+allow_anonymous false
+password_file /mosquitto/config/mosquitto.passwd
+```
+
+- The mosquitto.passwd file should contain the following
+The default username/password is admin/password
+```
+admin:$6$utCGq9HKlEIB2HWO$Q77ea1FcXR9b1XoGU/iWQ1Yf9ptVZOgjW/gIxM/YECHdDECZrt0GONub3JtlkC0IGqFrZg4JemcqHzjc1QakQg==
 ```
 
 - Navigate to Mosquitto project
